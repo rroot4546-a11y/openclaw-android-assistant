@@ -21,8 +21,8 @@ jobs:
         with:
           node-version: "21"
 
-      - name: Enable pnpm (monorepo uses workspace:*)
-        run: corepack enable
+      - name: Install pnpm
+        run: npm i -g pnpm@12
 
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile --prefer-offline
